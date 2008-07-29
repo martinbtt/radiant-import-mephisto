@@ -1,53 +1,52 @@
-= Import Mephisto
+= Radiant Extension: Import Mephisto 
 
-Currently a basic / rough and ready import script for Mephisto.
-
+A rough and ready import script to copy a Mephisto blog database into Radiant.
 
 Instructions for use:
-1) Setup a clean install of Radiant and freeze to the Edge version
-2) Install the comments extension 
-3) Update your database.yml to include an entry for 'mephisto:' 
-   with details of your Mephisto database. 
-4) cp environment/development.rb environment/mephisto.rb    
-5) script/console production
-   MephistoImport.all
-  
 
-= Requirements
+* 1) Setup a clean install of Radiant and freeze to the Edge version.
+* 2) Install the comments extension 
+* 3) Update your database.yml to include an entry for 'mephisto:' with details of your Mephisto database. 
+* 4) cp environment/development.rb environment/mephisto.rb    
+* 5) rake radiant:extensions:import_mephisto:run    
+  
+   
+== Requirements
 
 * Mephisto 0.6.7 or greater
-* Comments extension (list url here)
+* Comments extension (http://github.com/artofmission/radiant-comments)
 
 
-= What it does to
+== What does it do?
 
 Copies all of your published Mephisto articles including comments into Radiant
 
-= How it works
 
-It connects to your Mephisto
+== Limitations
 
-
-= Limitations
+Quite a few. It's rough and ready! Feel free to extend and fork to your hearts content. 
 
 * Sections are converted to tags
 * Assets are not copied across
 * Doesn't copy over any layout / templates or any other view information
 * Any other advanced features are also not supported.
 
-= What it could do   
+== What it could do   
   
-Have a nice configuration in Radiant where you configure what you do and 
-don't want copied across and any mappings.
+Have a nice configuration interface/page in Radiant where you setup what you do and 
+don't want copied across including any mappings.
    
-Would also be nice to be able to specify the original Mephisto DB credentials
-in the admin UI also.
+It would also be nice to be able to specify the original Mephisto DB credentials
+in the admin UI also. (rather than having to update a config file)
 
 = Goals
+
+These where my goals when creating the extension:
+
 * Copy across existing content - articles and contents
 * Copy across users
-* Keep url's the same
-* Keep existing design with some tweaks
+* Keep url's the same or have a way of mapping them
+* Keep the existing design with some tweaks
 
 
 = Contributing   
