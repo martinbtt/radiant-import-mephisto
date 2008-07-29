@@ -1,0 +1,55 @@
+= Import Mephisto
+
+Currently a basic / rough and ready import script for Mephisto.
+
+
+Instructions for use:
+1) Setup a clean install of Radiant and freeze to the Edge version
+2) Install the comments extension 
+3) Update your database.yml to include an entry for 'mephisto:' 
+   with details of your Mephisto database. 
+4) cp environment/development.rb environment/mephisto.rb    
+5) script/console production
+   MephistoImport.all
+  
+
+= Requirements
+
+* Mephisto 0.6.7 or greater
+* Comments extension (list url here)
+
+
+= What it does to
+
+Copies all of your published Mephisto articles including comments into Radiant
+
+= How it works
+
+It connects to your Mephisto
+
+
+= Limitations
+
+* Sections are converted to tags
+* Assets are not copied across
+* Doesn't copy over any layout / templates or any other view information
+* Any other advanced features are also not supported.
+
+= What it could do   
+  
+Have a nice configuration in Radiant where you configure what you do and 
+don't want copied across and any mappings.
+   
+Would also be nice to be able to specify the original Mephisto DB credentials
+in the admin UI also.
+
+= Goals
+* Copy across existing content - articles and contents
+* Copy across users
+* Keep url's the same
+* Keep existing design with some tweaks
+
+
+= Contributing   
+
+Feel free to build upon and submit patches / fork on Github.
