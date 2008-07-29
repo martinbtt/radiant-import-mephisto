@@ -4,11 +4,11 @@ A rough and ready import script for converting a Mephisto site to Radiant.
 
 Instructions for use:
 
-(1) Setup a clean install of Radiant and freeze to the Edge version.
-(2) Install the comments extension 
-(3) Update your database.yml to include an entry for 'mephisto:' with details of your Mephisto database. 
-(4) cp environment/development.rb environment/mephisto.rb    
-(5) rake radiant:extensions:import_mephisto:run    
+* 1) Setup a clean install of Radiant and freeze to the Edge version.
+* 2) Install the comments extension 
+* 3) Update your database.yml to include an entry for 'mephisto:' with details of your Mephisto database. 
+* 4) cp environment/development.rb environment/mephisto.rb    
+* 5) rake radiant:extensions:import_mephisto:run    
   
    
 == Requirements
