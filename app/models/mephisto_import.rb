@@ -9,7 +9,7 @@ class MephistoImport
   
   
   self.errors = {}
-
+@@errors = {}
   #Import the contents of a Mephisto db into radaint
   #
   #Usage:
